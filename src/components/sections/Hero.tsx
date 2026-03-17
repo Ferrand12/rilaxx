@@ -1,34 +1,27 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
-      {/* Gradient background — matches brandbook purple→pink→orange */}
-      <div className="absolute inset-0 bg-gradient-to-br from-rilaxx-purple via-rilaxx-pink to-rilaxx-orange" />
-
-      {/* Noise texture overlay for depth */}
-      <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')]" />
-
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-16 bg-white">
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center">
         {/* Left: copy */}
         <div className="flex flex-col gap-6">
-          <p className="font-script text-rilaxx-yellow text-2xl">Follow the Foxx</p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tight">
+          <p className="font-script text-rilaxx-purple text-2xl">Follow the Foxx</p>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tight text-black">
             Wilder<br />
-            <span className="text-rilaxx-yellow">Times</span><br />
-            Await
+            Times
           </h1>
-          <p className="font-mono text-white/80 text-sm md:text-base max-w-md leading-relaxed">
+          <p className="font-mono text-neutral-500 text-sm md:text-base max-w-md leading-relaxed">
             Cocktails con vodka que encienden la noche. No es solo una bebida — es la señal de que el buen rato empezó.
           </p>
           <div className="flex flex-wrap gap-4 mt-2">
             <a
               href="#comprar"
-              className="bg-rilaxx-yellow text-black font-bold uppercase tracking-widest text-sm px-8 py-3 rounded-full hover:bg-rilaxx-pale-yellow transition-colors"
+              className="bg-black text-white font-bold uppercase tracking-widest text-sm px-8 py-3 rounded-full hover:bg-neutral-800 transition-colors"
             >
               Quiero la mía
             </a>
             <a
               href="#sabores"
-              className="border-2 border-white/40 text-white font-bold uppercase tracking-widest text-sm px-8 py-3 rounded-full hover:border-white hover:bg-white/10 transition-colors"
+              className="border-2 border-neutral-300 text-black font-bold uppercase tracking-widest text-sm px-8 py-3 rounded-full hover:border-black transition-colors"
             >
               Explorar sabores
             </a>
@@ -37,26 +30,28 @@ export default function Hero() {
 
         {/* Right: product + mascot placeholders */}
         <div className="relative flex items-center justify-center min-h-[400px] lg:min-h-[500px]">
+          {/* Subtle brand glow behind product — only gradient accent in Hero */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-rilaxx-purple/8 via-rilaxx-pink/6 to-rilaxx-orange/8 blur-3xl" />
+          </div>
+
           {/* REPLACE: Fox mascot — swap with <Image src="/assets/brand/fox-hero.png" /> */}
           <div
-            className="placeholder-asset absolute -left-4 bottom-0 w-48 h-64 lg:w-56 lg:h-72 rounded-2xl bg-white/10"
+            className="placeholder-asset absolute -left-4 bottom-0 w-48 h-64 lg:w-56 lg:h-72 rounded-2xl bg-neutral-100"
             data-placeholder="Fox Mascot PNG"
           />
           {/* REPLACE: Can product — swap with <Image src="/assets/brand/can-frutos-rojos.png" /> */}
           <div
-            className="placeholder-asset w-44 h-72 lg:w-52 lg:h-80 rounded-2xl bg-white/10 rotate-[-6deg]"
+            className="placeholder-asset w-44 h-72 lg:w-52 lg:h-80 rounded-2xl bg-neutral-100 rotate-[-6deg] shadow-xl"
             data-placeholder="Lata Rilaxx PNG"
           />
-          {/* REPLACE: Rilaxx XX logo stamp */}
+          {/* REPLACE: Rilaxx sello circular "Follow the Foxx Chill & Drink" */}
           <div
-            className="placeholder-asset absolute -right-2 top-4 w-24 h-24 rounded-full bg-rilaxx-yellow/20 rotate-12"
-            data-placeholder="XX Isotipo"
+            className="placeholder-asset absolute -right-2 top-4 w-24 h-24 rounded-full bg-neutral-100 rotate-12 shadow-md"
+            data-placeholder="Sello"
           />
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
     </section>
   );
 }

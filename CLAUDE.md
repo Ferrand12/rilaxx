@@ -58,7 +58,7 @@ Fox with sunglasses. Multiple poses: DJ, dancing, upside down, holding drink, in
 ## File Structure Conventions
 - Brand assets: `/public/assets/brand/` (logos, final PNGs)
 - Placeholders: `/public/assets/placeholders/` (temporary SVGs/illustrations)
-- Brandbook PDFs: `/docs/`
+- Brandbook: `/docs/rilaxx-brandbook.pdf` (ONLY valid brand source — no other PDF)
 - Components: `/src/components/sections/` (one file per landing section)
 
 ## Development Rules
@@ -68,7 +68,13 @@ Fox with sunglasses. Multiple poses: DJ, dancing, upside down, holding drink, in
 - Framework: Next.js 16 + Tailwind CSS 4 + TypeScript
 - Never invent new branding — always reference the brandbook
 - Placeholders must be clearly marked for easy swap with final assets
-- Keep the visual personality bold, not generic ecommerce
+- Visual direction: elegant minimalism with powerful assets, NOT maximalismo colorido
+- Base: white/off-white (#FFFFFF or subtle warm white), editorial, generous negative space
+- Text: black (#000000) as primary text color for maximum contrast
+- Color lives in: product shots, mascot, brand seal, CTA accents — NOT in full-section gradient backgrounds
+- Gradients: NEVER as full-section backgrounds. Only as small controlled accents (badges, borders, glows behind assets)
+- Reference: "minimalismo con assets potentes" — contrast, air, sophistication with attitude
+- Feel: editorial, premium, sophisticated — NOT fun/childish/noisy
 
 ## Ruflo Integration
 - Ruflo is installed as an AI agent orchestration layer
