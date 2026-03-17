@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-16 bg-white">
@@ -28,28 +30,43 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right: product + mascot placeholders */}
+        {/* Right: fox + sello + XX */}
         <div className="relative flex items-center justify-center min-h-[400px] lg:min-h-[500px]">
-          {/* Subtle brand glow behind product — only gradient accent in Hero */}
+          {/* Subtle brand glow behind assets */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-rilaxx-purple/8 via-rilaxx-pink/6 to-rilaxx-orange/8 blur-3xl" />
           </div>
 
-          {/* REPLACE: Fox mascot — swap with <Image src="/assets/brand/fox-hero.png" /> */}
-          <div
-            className="placeholder-asset absolute -left-4 bottom-0 w-48 h-64 lg:w-56 lg:h-72 rounded-2xl bg-neutral-100"
-            data-placeholder="Fox Mascot PNG"
-          />
-          {/* REPLACE: Can product — swap with <Image src="/assets/brand/can-frutos-rojos.png" /> */}
-          <div
-            className="placeholder-asset w-44 h-72 lg:w-52 lg:h-80 rounded-2xl bg-neutral-100 rotate-[-6deg] shadow-xl"
-            data-placeholder="Lata Rilaxx PNG"
-          />
-          {/* REPLACE: Rilaxx sello circular "Follow the Foxx Chill & Drink" */}
-          <div
-            className="placeholder-asset absolute -right-2 top-4 w-24 h-24 rounded-full bg-neutral-100 rotate-12 shadow-md"
-            data-placeholder="Sello"
-          />
+          {/* Fox mascot — pink standing pose with can */}
+          <div className="relative w-72 h-80 lg:w-96 lg:h-[420px]">
+            <Image
+              src="/assets/brand/fox/fox-standing-pink.png"
+              alt="Rilaxx Fox mascot"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+
+          {/* Sello — Frutos Rojos (pink) */}
+          <div className="absolute -right-2 top-4 lg:right-4 lg:top-8 w-20 h-20 lg:w-28 lg:h-28 rotate-12">
+            <Image
+              src="/assets/brand/sello/sello-frutos-rojos.png"
+              alt="Follow the Foxx Chill & Drink"
+              fill
+              className="object-contain drop-shadow-md"
+            />
+          </div>
+
+          {/* XX isotipo — purple, decorative accent */}
+          <div className="absolute -left-4 top-8 w-12 h-12 lg:w-16 lg:h-16 -rotate-12 opacity-40">
+            <Image
+              src="/assets/brand/xx/xx-purple.png"
+              alt=""
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>

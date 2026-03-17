@@ -1,11 +1,4 @@
-const galleryItems = [
-  { label: "Evento Rilaxx Night", span: "col-span-2 row-span-2" },
-  { label: "Activación en bar", span: "col-span-1 row-span-1" },
-  { label: "DJ Set", span: "col-span-1 row-span-1" },
-  { label: "Crew shot", span: "col-span-1 row-span-2" },
-  { label: "Brindis grupal", span: "col-span-1 row-span-1" },
-  { label: "Social vibe", span: "col-span-1 row-span-1" },
-];
+import Image from "next/image";
 
 export default function Comunidad() {
   return (
@@ -23,15 +16,56 @@ export default function Comunidad() {
           </p>
         </div>
 
-        {/* REPLACE: swap all placeholders with real event/community photos */}
+        {/* Gallery with fox poses + sellos as visual anchors, placeholders for photos */}
         <div className="grid grid-cols-3 auto-rows-[180px] gap-4">
-          {galleryItems.map((item) => (
-            <div
-              key={item.label}
-              className={`placeholder-asset rounded-2xl bg-neutral-100 ${item.span} hover:shadow-md transition-all`}
-              data-placeholder={item.label}
-            />
-          ))}
+          {/* Fox DJ — large hero cell */}
+          <div className="col-span-2 row-span-2 rounded-2xl bg-neutral-100 overflow-hidden flex items-center justify-center hover:shadow-md transition-all">
+            <div className="relative w-64 h-56">
+              <Image
+                src="/assets/brand/fox/fox-dj.png"
+                alt="Fox DJ"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+          {/* Placeholder — event photo */}
+          <div
+            className="placeholder-asset col-span-1 row-span-1 rounded-2xl bg-neutral-100 hover:shadow-md transition-all"
+            data-placeholder="Foto evento"
+          />
+          {/* Sello Yerba Buena */}
+          <div className="col-span-1 row-span-1 rounded-2xl bg-neutral-100 overflow-hidden flex items-center justify-center hover:shadow-md transition-all">
+            <div className="relative w-24 h-24">
+              <Image
+                src="/assets/brand/sello/sello-yerba-buena.png"
+                alt="Sello Yerba Buena"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+          {/* Fox dancing */}
+          <div className="col-span-1 row-span-2 rounded-2xl bg-neutral-100 overflow-hidden flex items-center justify-center hover:shadow-md transition-all">
+            <div className="relative w-40 h-52">
+              <Image
+                src="/assets/brand/fox/fox-dancing.png"
+                alt="Fox bailando"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+          {/* Placeholder — crew photo */}
+          <div
+            className="placeholder-asset col-span-1 row-span-1 rounded-2xl bg-neutral-100 hover:shadow-md transition-all"
+            data-placeholder="Foto crew"
+          />
+          {/* Placeholder — brindis */}
+          <div
+            className="placeholder-asset col-span-1 row-span-1 rounded-2xl bg-neutral-100 hover:shadow-md transition-all"
+            data-placeholder="Foto brindis"
+          />
         </div>
       </div>
     </section>

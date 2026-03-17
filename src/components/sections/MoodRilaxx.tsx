@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function MoodRilaxx() {
   return (
     <section className="relative py-24 px-6 bg-neutral-50">
@@ -18,25 +20,41 @@ export default function MoodRilaxx() {
           </p>
         </div>
 
-        {/* Right: visual collage */}
+        {/* Right: mascot collage with real assets */}
         <div className="grid grid-cols-2 gap-4">
-          {/* REPLACE: lifestyle/night photos from brand shoots */}
-          <div
-            className="placeholder-asset rounded-2xl bg-neutral-100 h-48"
-            data-placeholder="Foto noche / party"
-          />
-          <div
-            className="placeholder-asset rounded-2xl bg-neutral-100 h-48 translate-y-8"
-            data-placeholder="Foto crew / amigos"
-          />
-          <div
-            className="placeholder-asset rounded-2xl bg-neutral-100 h-48 -translate-y-4"
-            data-placeholder="Foto producto in-situ"
-          />
-          <div
-            className="placeholder-asset rounded-2xl bg-neutral-100 h-48 translate-y-4"
-            data-placeholder="Fox mascot pose"
-          />
+          {/* Fox in cocktail glass — hero visual */}
+          <div className="relative rounded-2xl bg-neutral-100 h-48 col-span-2 overflow-hidden flex items-center justify-center">
+            <div className="relative w-48 h-44">
+              <Image
+                src="/assets/brand/fox/fox-cocktail.png"
+                alt="Fox Rilaxx en cocktail"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+          {/* Sello mango — decorative */}
+          <div className="relative rounded-2xl bg-neutral-100 h-48 overflow-hidden flex items-center justify-center">
+            <div className="relative w-28 h-28">
+              <Image
+                src="/assets/brand/sello/sello-mango.png"
+                alt="Sello Mango"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+          {/* XX isotipo — decorative accent */}
+          <div className="relative rounded-2xl bg-neutral-100 h-48 overflow-hidden flex items-center justify-center">
+            <div className="relative w-20 h-20 opacity-60">
+              <Image
+                src="/assets/brand/xx/xx-yellow.png"
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

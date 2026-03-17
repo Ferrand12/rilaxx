@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Nosotros() {
   return (
     <section id="nosotros" className="section-dark relative py-24 px-6 overflow-hidden bg-black">
@@ -6,7 +8,6 @@ export default function Nosotros() {
           Chill &amp; Drink
         </p>
 
-        {/* Manifesto — not corporate, feels like a friend talking */}
         <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight mb-8 text-white">
           Creamos Rilaxx porque la noche<br />
           merecía algo mejor.
@@ -29,13 +30,27 @@ export default function Nosotros() {
           </p>
         </div>
 
-        {/* REPLACE: brand manifesto image or fox illustration */}
+        {/* Fox handstand — playful contrast with serious manifesto */}
         <div className="mt-12 flex justify-center">
-          <div
-            className="placeholder-asset w-64 h-40 rounded-2xl bg-white/5"
-            data-placeholder="Ilustración fox / manifiesto"
-          />
+          <div className="relative w-48 h-48">
+            <Image
+              src="/assets/brand/fox/fox-handstand.png"
+              alt="Fox Rilaxx de cabeza"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
+      </div>
+
+      {/* Decorative logo watermark */}
+      <div className="absolute bottom-8 right-8 w-24 h-8 opacity-10">
+        <Image
+          src="/assets/brand/logo/rilaxx-white.png"
+          alt=""
+          fill
+          className="object-contain"
+        />
       </div>
     </section>
   );

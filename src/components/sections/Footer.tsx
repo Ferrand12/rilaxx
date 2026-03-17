@@ -1,11 +1,19 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-neutral-800 py-12 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
-          {/* REPLACE: logo image */}
-          <p className="text-2xl font-black uppercase tracking-tight text-white mb-3">Rilaxx</p>
+          <div className="relative w-28 h-8 mb-3">
+            <Image
+              src="/assets/brand/logo/rilaxx-white.png"
+              alt="Rilaxx"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
           <p className="font-mono text-white/40 text-xs">
             Follow the Foxx, Chill &amp; Drink.
           </p>
@@ -22,7 +30,6 @@ export default function Footer() {
         {/* Social + Contact */}
         <div className="flex flex-col gap-2">
           <p className="font-bold text-sm uppercase tracking-widest text-white/30 mb-2">Síguenos</p>
-          {/* REPLACE: real social links */}
           <a href="#" className="font-mono text-sm text-white/50 hover:text-white transition-colors">Instagram</a>
           <a href="#" className="font-mono text-sm text-white/50 hover:text-white transition-colors">TikTok</a>
           <a href="#" className="font-mono text-sm text-white/50 hover:text-white transition-colors">Contacto</a>

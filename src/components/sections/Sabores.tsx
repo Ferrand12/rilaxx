@@ -1,31 +1,33 @@
+import Image from "next/image";
+
 const flavors = [
   {
     name: "Frutos Rojos",
     tagline: "La noche tiene color.",
     accentColor: "bg-rilaxx-purple",
     textColor: "text-rilaxx-purple",
-    placeholderLabel: "Lata Frutos Rojos",
+    sello: "/assets/brand/sello/sello-frutos-rojos.png",
   },
   {
     name: "Yerba Buena",
     tagline: "Frescura que no pide permiso.",
     accentColor: "bg-rilaxx-teal",
     textColor: "text-rilaxx-teal",
-    placeholderLabel: "Lata Yerba Buena",
+    sello: "/assets/brand/sello/sello-yerba-buena.png",
   },
   {
     name: "Mango",
     tagline: "Trópico en cada trago.",
     accentColor: "bg-rilaxx-amber",
     textColor: "text-rilaxx-amber",
-    placeholderLabel: "Lata Mango",
+    sello: "/assets/brand/sello/sello-mango.png",
   },
   {
     name: "Naranja Maracuyá",
     tagline: "Intenso como la fiesta.",
     accentColor: "bg-rilaxx-orange",
     textColor: "text-rilaxx-orange",
-    placeholderLabel: "Lata Naranja Maracuyá",
+    sello: "/assets/brand/sello/sello-naranja-maracuya.png",
   },
 ];
 
@@ -48,15 +50,19 @@ export default function Sabores() {
               key={f.name}
               className="group relative rounded-2xl overflow-hidden bg-white border border-neutral-200 hover:shadow-lg transition-all"
             >
-              {/* Color accent bar — only gradient element per card */}
+              {/* Color accent bar */}
               <div className={`h-1 ${f.accentColor}`} />
 
               <div className="p-6 flex flex-col items-center min-h-[380px]">
-                {/* REPLACE: swap placeholder with <Image src={`/assets/brand/can-${slug}.png`} /> */}
-                <div
-                  className="placeholder-asset w-28 h-48 rounded-xl bg-neutral-100 mt-4 mb-6"
-                  data-placeholder={f.placeholderLabel}
-                />
+                {/* Sello as flavor visual — swap with can PNGs when available */}
+                <div className="relative w-32 h-32 mt-4 mb-6">
+                  <Image
+                    src={f.sello}
+                    alt={`Sello ${f.name}`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
 
                 <div className="text-center mt-auto">
                   <h3 className={`text-xl font-black uppercase tracking-tight mb-1 ${f.textColor}`}>

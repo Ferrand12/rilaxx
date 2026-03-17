@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -8,9 +9,14 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo — REPLACE: swap text with <Image src="/assets/brand/logo.png" /> */}
-        <a href="#" className="text-2xl font-black uppercase tracking-tight text-black">
-          Rilaxx
+        <a href="#" className="relative w-32 h-10">
+          <Image
+            src="/assets/brand/logo/rilaxx-black.png"
+            alt="Rilaxx"
+            fill
+            className="object-contain object-left"
+            priority
+          />
         </a>
 
         {/* Desktop links */}
