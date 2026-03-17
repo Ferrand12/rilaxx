@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0a0a;
+  --color-foreground: #ffffff;
+
+  /* Rilaxx Brand Colors */
+  --color-rilaxx-purple: #862660;
+  --color-rilaxx-pink: #D33661;
+  --color-rilaxx-teal: #037262;
+  --color-rilaxx-green: #79B92E;
+  --color-rilaxx-orange: #F39200;
+  --color-rilaxx-dark-orange: #EB631A;
+  --color-rilaxx-yellow: #FEC900;
+  --color-rilaxx-amber: #FAB434;
+  --color-rilaxx-light-pink: #F4A9BE;
+  --color-rilaxx-lime: #C7D42D;
+  --color-rilaxx-pale-yellow: #FCF100;
+
+  --font-sans: var(--font-nunito);
+  --font-mono: var(--font-space-mono);
+  --font-script: var(--font-yellowtail);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #862660;
+  border-radius: 4px;
+}
+
+/* Placeholder asset boxes — easy to find and replace */
+.placeholder-asset {
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.placeholder-asset::after {
+  content: attr(data-placeholder);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

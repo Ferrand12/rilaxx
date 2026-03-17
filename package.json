@@ -1,0 +1,31 @@
+{
+  "name": "rilaxx",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "ruflo:init": "npx ruflo@latest init --wizard",
+    "ruflo:mcp": "npx ruflo@latest mcp start",
+    "ruflo:help": "npx ruflo@latest --help",
+    "ruflo:agents": "npx ruflo@latest agent list",
+    "ruflo:daemon": "npx ruflo@latest daemon start"
+  },
+  "dependencies": {
+    "next": "16.1.7",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
