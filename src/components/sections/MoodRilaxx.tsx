@@ -22,9 +22,19 @@ export default function MoodRilaxx() {
 
         {/* Right: mascot collage with real assets */}
         <div className="grid grid-cols-2 gap-4">
-          {/* Fox in cocktail glass — hero visual */}
-          <div className="relative rounded-2xl bg-neutral-100 h-48 col-span-2 overflow-hidden flex items-center justify-center">
-            <div className="relative w-48 h-44">
+          {/* Frutos Rojos can pile — lifestyle hero visual */}
+          <div className="relative rounded-2xl h-48 col-span-2 overflow-hidden">
+            <Image
+              src="/assets/brand/latas/frutos-rojos/frutos-rojos-1.png"
+              alt="Latas Rilaxx Frutos Rojos"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+          {/* Fox in cocktail glass */}
+          <div className="relative rounded-2xl bg-neutral-100 h-48 overflow-hidden flex items-center justify-center">
+            <div className="relative w-36 h-40">
               <Image
                 src="/assets/brand/fox/fox-cocktail.png"
                 alt="Fox Rilaxx en cocktail"
@@ -33,27 +43,14 @@ export default function MoodRilaxx() {
               />
             </div>
           </div>
-          {/* Sello mango — decorative */}
-          <div className="relative rounded-2xl bg-neutral-100 h-48 overflow-hidden flex items-center justify-center">
-            <div className="relative w-28 h-28">
-              <Image
-                src="/assets/brand/sello/sello-mango.png"
-                alt="Sello Mango"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-          {/* XX isotipo — decorative accent */}
-          <div className="relative rounded-2xl bg-neutral-100 h-48 overflow-hidden flex items-center justify-center">
-            <div className="relative w-20 h-20 opacity-60">
-              <Image
-                src="/assets/brand/xx/xx-yellow.png"
-                alt=""
-                fill
-                className="object-contain"
-              />
-            </div>
+          {/* Yerbabuena can — single front */}
+          <div className="relative rounded-2xl h-48 overflow-hidden">
+            <Image
+              src="/assets/brand/latas/yerbabuena/yerbabuena-2.png"
+              alt="Latas Yerba Buena"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

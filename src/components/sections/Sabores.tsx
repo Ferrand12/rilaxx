@@ -6,6 +6,7 @@ const flavors = [
     tagline: "La noche tiene color.",
     accentColor: "bg-rilaxx-purple",
     textColor: "text-rilaxx-purple",
+    can: "/assets/brand/latas/frutos-rojos/frutos-rojos-4.png",
     sello: "/assets/brand/sello/sello-frutos-rojos.png",
   },
   {
@@ -13,6 +14,7 @@ const flavors = [
     tagline: "Frescura que no pide permiso.",
     accentColor: "bg-rilaxx-teal",
     textColor: "text-rilaxx-teal",
+    can: "/assets/brand/latas/yerbabuena/yerbabuena-4.png",
     sello: "/assets/brand/sello/sello-yerba-buena.png",
   },
   {
@@ -20,6 +22,7 @@ const flavors = [
     tagline: "Trópico en cada trago.",
     accentColor: "bg-rilaxx-amber",
     textColor: "text-rilaxx-amber",
+    can: "/assets/brand/latas/mango/mango-4.png",
     sello: "/assets/brand/sello/sello-mango.png",
   },
   {
@@ -27,6 +30,7 @@ const flavors = [
     tagline: "Intenso como la fiesta.",
     accentColor: "bg-rilaxx-orange",
     textColor: "text-rilaxx-orange",
+    can: "/assets/brand/latas/naranja-maracuya/naranja-maracuya-4.png",
     sello: "/assets/brand/sello/sello-naranja-maracuya.png",
   },
 ];
@@ -50,34 +54,39 @@ export default function Sabores() {
               key={f.name}
               className="group relative rounded-2xl overflow-hidden bg-white border border-neutral-200 hover:shadow-lg transition-all"
             >
-              {/* Color accent bar */}
-              <div className={`h-1 ${f.accentColor}`} />
-
-              <div className="p-6 flex flex-col items-center min-h-[380px]">
-                {/* Sello as flavor visual — swap with can PNGs when available */}
-                <div className="relative w-32 h-32 mt-4 mb-6">
+              {/* Can image — 4K render */}
+              <div className="relative w-full aspect-[16/9] overflow-hidden">
+                <Image
+                  src={f.can}
+                  alt={`Lata Rilaxx ${f.name}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                {/* Sello as floating accent */}
+                <div className="absolute top-3 right-3 w-12 h-12 opacity-80">
                   <Image
                     src={f.sello}
-                    alt={`Sello ${f.name}`}
+                    alt=""
                     fill
-                    className="object-contain"
+                    className="object-contain drop-shadow-md"
                   />
                 </div>
+              </div>
 
-                <div className="text-center mt-auto">
-                  <h3 className={`text-xl font-black uppercase tracking-tight mb-1 ${f.textColor}`}>
-                    {f.name}
-                  </h3>
-                  <p className="font-mono text-neutral-400 text-xs mb-4">
-                    {f.tagline}
-                  </p>
-                  <a
-                    href="#comprar"
-                    className="inline-block text-black font-bold text-xs uppercase tracking-widest hover:text-rilaxx-purple transition-colors"
-                  >
-                    Ver sabor &rarr;
-                  </a>
-                </div>
+              <div className="p-5">
+                <h3 className={`text-lg font-black uppercase tracking-tight mb-1 ${f.textColor}`}>
+                  {f.name}
+                </h3>
+                <p className="font-mono text-neutral-400 text-xs mb-3">
+                  {f.tagline}
+                </p>
+                <a
+                  href="#comprar"
+                  className="inline-block text-black font-bold text-xs uppercase tracking-widest hover:text-rilaxx-purple transition-colors"
+                >
+                  Ver sabor &rarr;
+                </a>
               </div>
             </div>
           ))}

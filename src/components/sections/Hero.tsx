@@ -30,26 +30,38 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right: fox + sello + XX */}
+        {/* Right: hero can + fox + accents */}
         <div className="relative flex items-center justify-center min-h-[400px] lg:min-h-[500px]">
           {/* Subtle brand glow behind assets */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-rilaxx-purple/8 via-rilaxx-pink/6 to-rilaxx-orange/8 blur-3xl" />
           </div>
 
-          {/* Fox mascot — pink standing pose with can */}
-          <div className="relative w-72 h-80 lg:w-96 lg:h-[420px]">
+          {/* Hero can image — Frutos Rojos two-can shot */}
+          <div className="relative w-80 h-56 lg:w-[480px] lg:h-[280px] rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/assets/brand/latas/frutos-rojos/frutos-rojos-2.png"
+              alt="Lata Rilaxx Frutos Rojos"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 320px, 480px"
+            />
+          </div>
+
+          {/* Fox mascot floating — pink standing pose */}
+          <div className="absolute -bottom-4 -left-8 lg:-left-12 w-36 h-44 lg:w-48 lg:h-56">
             <Image
               src="/assets/brand/fox/fox-standing-pink.png"
               alt="Rilaxx Fox mascot"
               fill
-              className="object-contain"
+              className="object-contain drop-shadow-lg"
               priority
             />
           </div>
 
           {/* Sello — Frutos Rojos (pink) */}
-          <div className="absolute -right-2 top-4 lg:right-4 lg:top-8 w-20 h-20 lg:w-28 lg:h-28 rotate-12">
+          <div className="absolute -right-2 -top-2 lg:right-0 lg:-top-4 w-16 h-16 lg:w-20 lg:h-20 rotate-12">
             <Image
               src="/assets/brand/sello/sello-frutos-rojos.png"
               alt="Follow the Foxx Chill & Drink"
@@ -59,7 +71,7 @@ export default function Hero() {
           </div>
 
           {/* XX isotipo — purple, decorative accent */}
-          <div className="absolute -left-4 top-8 w-12 h-12 lg:w-16 lg:h-16 -rotate-12 opacity-40">
+          <div className="absolute -left-4 top-4 w-10 h-10 lg:w-14 lg:h-14 -rotate-12 opacity-30">
             <Image
               src="/assets/brand/xx/xx-purple.png"
               alt=""

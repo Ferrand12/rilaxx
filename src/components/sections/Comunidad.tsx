@@ -29,11 +29,17 @@ export default function Comunidad() {
               />
             </div>
           </div>
-          {/* Placeholder — event photo */}
-          <div
-            className="placeholder-asset col-span-1 row-span-1 rounded-2xl bg-neutral-100 hover:shadow-md transition-all"
-            data-placeholder="Foto evento"
-          />
+          {/* Naranja Maracuyá lifestyle shot */}
+          <div className="col-span-1 row-span-1 rounded-2xl bg-neutral-100 overflow-hidden hover:shadow-md transition-all">
+            <div className="relative w-full h-full">
+              <Image
+                src="/assets/brand/latas/naranja-maracuya/naranja-maracuya-3.png"
+                alt="Lata Naranja Maracuyá detalle"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
           {/* Sello Yerba Buena */}
           <div className="col-span-1 row-span-1 rounded-2xl bg-neutral-100 overflow-hidden flex items-center justify-center hover:shadow-md transition-all">
             <div className="relative w-24 h-24">
@@ -56,16 +62,28 @@ export default function Comunidad() {
               />
             </div>
           </div>
-          {/* Placeholder — crew photo */}
-          <div
-            className="placeholder-asset col-span-1 row-span-1 rounded-2xl bg-neutral-100 hover:shadow-md transition-all"
-            data-placeholder="Foto crew"
-          />
-          {/* Placeholder — brindis */}
-          <div
-            className="placeholder-asset col-span-1 row-span-1 rounded-2xl bg-neutral-100 hover:shadow-md transition-all"
-            data-placeholder="Foto brindis"
-          />
+          {/* Mango can pile — lifestyle */}
+          <div className="col-span-1 row-span-1 rounded-2xl bg-neutral-100 overflow-hidden hover:shadow-md transition-all">
+            <div className="relative w-full h-full">
+              <Image
+                src="/assets/brand/latas/mango/mango-1.png"
+                alt="Latas Mango"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+          {/* Yerbabuena can — close-up */}
+          <div className="col-span-1 row-span-1 rounded-2xl bg-neutral-100 overflow-hidden hover:shadow-md transition-all">
+            <div className="relative w-full h-full">
+              <Image
+                src="/assets/brand/latas/yerbabuena/yerbabuena-3.png"
+                alt="Lata Yerba Buena detalle"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
