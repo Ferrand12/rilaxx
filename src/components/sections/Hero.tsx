@@ -6,8 +6,8 @@ export default function Hero() {
       {/* Full-bleed product image — the can IS the hero */}
       <div className="absolute inset-0">
         <Image
-          src="/assets/brand/latas/frutos-rojos/frutos-rojos-1.png"
-          alt="Rilaxx Frutos Rojos"
+          src="/assets/brand/latas/hero-lineup.png"
+          alt="Rilaxx — 4 sabores"
           fill
           className="object-cover"
           priority
