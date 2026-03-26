@@ -1,7 +1,7 @@
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
-import Sabores from "@/components/sections/Sabores";
+import ProductShowcase from "@/components/sections/ProductShowcase";
 import MoodRilaxx from "@/components/sections/MoodRilaxx";
 import Comunidad from "@/components/sections/Comunidad";
 import Nosotros from "@/components/sections/Nosotros";
@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Marquee />
-        <Sabores />
+        <ProductShowcase />
         <MoodRilaxx />
         <Comunidad />
         <Nosotros />
