@@ -101,7 +101,7 @@ export default function ProductShowcase() {
           {flavor.name}
         </h3>
         <a
-          href="#comprar"
+          href="/comprar"
           className="inline-block bg-white text-black font-bold uppercase tracking-widest text-xs px-8 py-3 hover:bg-rilaxx-yellow transition-colors"
         >
           Comprar ahora

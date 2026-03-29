@@ -30,7 +30,7 @@ export default function Navbar() {
             Nosotros
           </a>
           <a
-            href="#comprar"
+            href="/comprar"
             className="bg-black text-white text-xs font-bold uppercase tracking-[0.15em] px-5 py-2 hover:bg-rilaxx-purple transition-colors"
           >
             Comprar
@@ -57,7 +57,7 @@ export default function Navbar() {
           <a href="#sabores" onClick={() => setOpen(false)} className="text-xs font-mono uppercase tracking-[0.15em] text-neutral-500">Sabores</a>
           <a href="#comunidad" onClick={() => setOpen(false)} className="text-xs font-mono uppercase tracking-[0.15em] text-neutral-500">Comunidad</a>
           <a href="#nosotros" onClick={() => setOpen(false)} className="text-xs font-mono uppercase tracking-[0.15em] text-neutral-500">Nosotros</a>
-          <a href="#comprar" onClick={() => setOpen(false)} className="bg-black text-white text-xs font-bold uppercase tracking-[0.15em] px-5 py-2 text-center">Comprar</a>
+          <a href="/comprar" onClick={() => setOpen(false)} className="bg-black text-white text-xs font-bold uppercase tracking-[0.15em] px-5 py-2 text-center">Comprar</a>
         </div>
       )}
     </nav>

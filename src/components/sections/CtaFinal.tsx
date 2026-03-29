@@ -22,7 +22,7 @@ export default function CtaFinal() {
           Tu próxima noche<br />empieza aquí
         </h2>
         <a
-          href="#"
+          href="/comprar"
           className="inline-block bg-white text-black font-bold uppercase tracking-widest text-sm px-10 py-4 hover:bg-rilaxx-yellow transition-colors"
         >
           Comprar ahora
